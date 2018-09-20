@@ -14,7 +14,7 @@
     }
   </style>
   <body>
-    <form role="form" id="formChat">
+    <form role="form" id="formChat" >
       <label for="user">User</label>
       <input type="text" id="user" name="user" value="">
 
@@ -23,11 +23,11 @@
       <label for="message">Message</label>
       <input type="text" id="message" name="message" value="">
 
-      <button type="button" name="button" id="send">Send</button>
+      <button type="button" name="button" id="send" onclick="">Send</button>
     </form>
   </body>
 </html>
 
+<script src="app.js"></script>
 <?php include('register.php'); ?>
 <?php include('conversation.php'); ?>
-  <script src="app.js"></script>

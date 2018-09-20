@@ -14,7 +14,6 @@
   $result = mysqli_query($conexion, $sql);
 
   while ($data = mysqli_fetch_assoc($result)) {
-    // echo "<p><b>".$data["usuario"]."</b> dice: ".$data["mensaje"]."</p>";
     echo "<p><b>".$data["usuario"]."</b> dice: ".$data["mensaje"]."</p>";
   }
 

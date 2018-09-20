@@ -4,22 +4,27 @@ $(document).on('ready', function () {
   setInterval('loadOldMessages()', 500);
 
 });
+// const formulario = document.getElementById('send');
+// formulario.addEventListener('click', registerMessages);
 
  function registerMessages () {
   $('#send').on('click', function (e) {
     e.preventDefault();
     var frm = $('#formChat').serialize();
     console.log(frm);
-    $.ajax({
-      type: 'POST',
-      url: 'register.php',
-      data: frm
-    }).done( function (info) {
-      $('#message').val('');
-      var altura = $('#conversation').prop('scrollHeight');
-      $('#conversation').scrollTop(altura);
-      console.log(info);
-    });
+    const message = document.getElementById('message');
+    if (message !== '') {
+      $.ajax({
+        type: 'POST',
+        url: 'register.php',
+        data: frm
+      }).done( function (info) {
+        $('#message').val('');
+        var altura = $('#conversation').prop('scrollHeight');
+        $('#conversation').scrollTop(altura);
+        console.log(info);
+      });
+    };
   });
 };
 
